@@ -1,0 +1,11 @@
+{
+  "model_name": "meta-llama/Llama-2-7b-hf",
+  "win_rate_vs_baseline": 79.0,
+  "loss_rate_vs_baseline": 14.75,
+  "tie_rate_vs_baseline": 6.25,
+  "average_score": 4.0925,
+  "total_comparisons": 800,
+  "baseline_model": "text-davinci-003",
+  "judge_model": "prometheus-eval/prometheus-7b-v2.0",
+  "dataset": "AlpacaEval (800 instructions)"
+}

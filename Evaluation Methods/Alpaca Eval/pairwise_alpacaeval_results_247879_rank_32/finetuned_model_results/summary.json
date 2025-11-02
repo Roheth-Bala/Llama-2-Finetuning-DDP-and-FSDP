@@ -1,0 +1,11 @@
+{
+  "model_name": "/home/e/e1415353/my_projects/Assignment7Folder/Assignment7/results_241919/dolly_lora_llama2_7b_tuned_v1/final",
+  "win_rate_vs_baseline": 83.75,
+  "loss_rate_vs_baseline": 10.75,
+  "tie_rate_vs_baseline": 5.5,
+  "average_score": 4.1875,
+  "total_comparisons": 800,
+  "baseline_model": "text-davinci-003",
+  "judge_model": "prometheus-eval/prometheus-7b-v2.0",
+  "dataset": "AlpacaEval (800 instructions)"
+}

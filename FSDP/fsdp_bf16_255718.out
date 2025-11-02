@@ -1,0 +1,125 @@
+Initializing Conda...
+Activating Conda environment: ml
+Conda environment 'ml' activated.
+Creating directories...
+Log directory: /home/e/e1415353/my_projects/Assignment7Folder/Assignment7/logs_alpaca
+Results directory: /home/e/e1415353/my_projects/Assignment7Folder/Assignment7/results/fsdp_qlora_255718
+Starting FSDP (bf16) training...
+[Rank 1] Running on SLURM cluster. world_size: 2, local_rank: 1
+[Rank 0] Running on SLURM cluster. world_size: 2, local_rank: 0
+xgpi13:2106861:2106861 [0] NCCL INFO Bootstrap: Using ens6f0np0:192.168.51.175<0>
+xgpi13:2106861:2106861 [0] NCCL INFO cudaDriverVersion 12090
+xgpi13:2106861:2106861 [0] NCCL INFO NCCL version 2.27.3+cuda12.9
+xgpi13:2106861:2106861 [0] NCCL INFO Comm config Blocking set to 1
+xgpi13:2106862:2106862 [1] NCCL INFO cudaDriverVersion 12090
+xgpi13:2106862:2106862 [1] NCCL INFO Bootstrap: Using ens6f0np0:192.168.51.175<0>
+xgpi13:2106862:2106862 [1] NCCL INFO NCCL version 2.27.3+cuda12.9
+xgpi13:2106862:2106862 [1] NCCL INFO Comm config Blocking set to 1
+xgpi13:2106861:2107048 [0] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. 
+xgpi13:2106861:2107048 [0] NCCL INFO NET/IB : No device found.
+xgpi13:2106861:2107048 [0] NCCL INFO NET/IB : Using [RO]; OOB ens6f0np0:192.168.51.175<0>
+xgpi13:2106861:2107048 [0] NCCL INFO NET/Socket : Using [0]ens6f0np0:192.168.51.175<0> [1]ens6f1np1:192.168.57.234<0>
+xgpi13:2106861:2107048 [0] NCCL INFO Initialized NET plugin Socket
+xgpi13:2106861:2107048 [0] NCCL INFO Assigned NET plugin Socket to comm
+xgpi13:2106861:2107048 [0] NCCL INFO Using network Socket
+xgpi13:2106861:2107048 [0] NCCL INFO ncclCommInitRankConfig comm 0x3c4d69b0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 82000 commId 0xb3b78f0b243f800e - Init START
+xgpi13:2106862:2107049 [1] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. 
+xgpi13:2106862:2107049 [1] NCCL INFO NET/IB : No device found.
+xgpi13:2106862:2107049 [1] NCCL INFO NET/IB : Using [RO]; OOB ens6f0np0:192.168.51.175<0>
+xgpi13:2106862:2107049 [1] NCCL INFO NET/Socket : Using [0]ens6f0np0:192.168.51.175<0> [1]ens6f1np1:192.168.57.234<0>
+xgpi13:2106862:2107049 [1] NCCL INFO Initialized NET plugin Socket
+xgpi13:2106862:2107049 [1] NCCL INFO Assigned NET plugin Socket to comm
+xgpi13:2106862:2107049 [1] NCCL INFO Using network Socket
+xgpi13:2106862:2107049 [1] NCCL INFO ncclCommInitRankConfig comm 0x3d6c0070 rank 1 nranks 2 cudaDev 1 nvmlDev 1 busId e3000 commId 0xb3b78f0b243f800e - Init START
+xgpi13:2106861:2107048 [0] NCCL INFO RAS client listening socket at 127.0.0.1<28028>
+xgpi13:2106862:2107049 [1] NCCL INFO RAS client listening socket at 127.0.0.1<28028>
+xgpi13:2106861:2107048 [0] NCCL INFO Bootstrap timings total 0.025808 (create 0.000034, send 0.000102, recv 0.025036, ring 0.000103, delay 0.000000)
+xgpi13:2106862:2107049 [1] NCCL INFO Bootstrap timings total 0.001051 (create 0.000048, send 0.000134, recv 0.000417, ring 0.000049, delay 0.000000)
+xgpi13:2106861:2107048 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106861:2107048 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106861:2107048 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106861:2107048 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106861:2107048 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106861:2107048 [0] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106861:2107048 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106861:2107048 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106862:2107049 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106862:2107049 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106862:2107049 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106862:2107049 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106862:2107049 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106862:2107049 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106862:2107049 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106862:2107049 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106862:2107049 [1] NCCL INFO Setting affinity for GPU 1 to 32-35,96-99
+xgpi13:2106861:2107048 [0] NCCL INFO comm 0x3c4d69b0 rank 0 nRanks 2 nNodes 1 localRanks 2 localRank 0 MNNVL 0
+xgpi13:2106861:2107048 [0] NCCL INFO Channel 00/04 : 0 1
+xgpi13:2106861:2107048 [0] NCCL INFO Channel 01/04 : 0 1
+xgpi13:2106861:2107048 [0] NCCL INFO Channel 02/04 : 0 1
+xgpi13:2106861:2107048 [0] NCCL INFO Channel 03/04 : 0 1
+xgpi13:2106861:2107048 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] -1/-1/-1->0->1 [2] 1/-1/-1->0->-1 [3] -1/-1/-1->0->1
+xgpi13:2106861:2107048 [0] NCCL INFO P2P Chunksize set to 131072
+xgpi13:2106862:2107049 [1] NCCL INFO comm 0x3d6c0070 rank 1 nRanks 2 nNodes 1 localRanks 2 localRank 1 MNNVL 0
+xgpi13:2106862:2107049 [1] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] 0/-1/-1->1->-1 [2] -1/-1/-1->1->0 [3] 0/-1/-1->1->-1
+xgpi13:2106862:2107049 [1] NCCL INFO P2P Chunksize set to 131072
+xgpi13:2106861:2107048 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+xgpi13:2106861:2107048 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106861:2107048 [0] NCCL INFO Check P2P Type isAllDirectP2p 0 directMode 0
+xgpi13:2106862:2107049 [1] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+xgpi13:2106862:2107049 [1] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106861:2107053 [0] NCCL INFO [Proxy Service] Device 0 CPU core 3
+xgpi13:2106861:2107055 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 2
+xgpi13:2106862:2107054 [1] NCCL INFO [Proxy Service UDS] Device 1 CPU core 96
+xgpi13:2106862:2107052 [1] NCCL INFO [Proxy Service] Device 1 CPU core 98
+xgpi13:2106861:2107048 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+xgpi13:2106861:2107048 [0] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+xgpi13:2106862:2107049 [1] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+xgpi13:2106862:2107049 [1] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+xgpi13:2106861:2107048 [0] NCCL INFO CC Off, workFifoBytes 1048576
+xgpi13:2106861:2107048 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+xgpi13:2106861:2107048 [0] NCCL INFO ncclCommInitRankConfig comm 0x3c4d69b0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 82000 commId 0xb3b78f0b243f800e - Init COMPLETE
+xgpi13:2106861:2107048 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 0 nranks 2 total 0.24 (kernels 0.20, alloc 0.01, bootstrap 0.03, allgathers 0.00, topo 0.01, graphs 0.00, connections 0.00, rest 0.00)
+xgpi13:2106862:2107049 [1] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+xgpi13:2106862:2107049 [1] NCCL INFO ncclCommInitRankConfig comm 0x3d6c0070 rank 1 nranks 2 cudaDev 1 nvmlDev 1 busId e3000 commId 0xb3b78f0b243f800e - Init COMPLETE
+xgpi13:2106862:2107049 [1] NCCL INFO Init timings - ncclCommInitRankConfig: rank 1 nranks 2 total 0.22 (kernels 0.21, alloc 0.00, bootstrap 0.00, allgathers 0.00, topo 0.01, graphs 0.00, connections 0.00, rest 0.00)
+xgpi13:2106862:2107056 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106861:2107057 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106861:2107057 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106862:2107056 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106861:2107057 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106862:2107056 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106861:2107057 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106862:2107056 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106861:2107057 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106862:2107056 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106861:2107057 [0] NCCL INFO Channel 00 : 0[0] -> 1[1] via SHM/direct/direct
+xgpi13:2106861:2107057 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106862:2107056 [1] NCCL INFO Channel 00 : 1[1] -> 0[0] via SHM/direct/direct
+xgpi13:2106862:2107056 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106861:2107057 [0] NCCL INFO Channel 01 : 0[0] -> 1[1] via SHM/direct/direct
+xgpi13:2106861:2107057 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106862:2107056 [1] NCCL INFO Channel 01 : 1[1] -> 0[0] via SHM/direct/direct
+xgpi13:2106862:2107056 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106861:2107057 [0] NCCL INFO Channel 02 : 0[0] -> 1[1] via SHM/direct/direct
+xgpi13:2106861:2107057 [0] NCCL INFO P2P is disabled between connected GPUs 0 and 1. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106862:2107056 [1] NCCL INFO Channel 02 : 1[1] -> 0[0] via SHM/direct/direct
+xgpi13:2106862:2107056 [1] NCCL INFO P2P is disabled between connected GPUs 1 and 0. You can repress this message with NCCL_IGNORE_DISABLED_P2P=1.
+xgpi13:2106861:2107057 [0] NCCL INFO Channel 03 : 0[0] -> 1[1] via SHM/direct/direct
+xgpi13:2106862:2107056 [1] NCCL INFO Channel 03 : 1[1] -> 0[0] via SHM/direct/direct
+xgpi13:2106861:2107057 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 1
+xgpi13:2106862:2107056 [1] NCCL INFO Connected all rings, use ring PXN 0 GDR 1
+{'loss': 1.3704, 'grad_norm': 1.0997092723846436, 'learning_rate': 9.45568428971927e-05, 'num_tokens': 1322672.0, 'mean_token_accuracy': 0.6811226364970208, 'epoch': 0.53}
+{'eval_loss': 1.3198024034500122, 'eval_runtime': 108.2485, 'eval_samples_per_second': 13.875, 'eval_steps_per_second': 1.737, 'eval_num_tokens': 1322672.0, 'eval_mean_token_accuracy': 0.687961960092504, 'epoch': 0.53}
+{'loss': 1.326, 'grad_norm': 0.1512484848499298, 'learning_rate': 7.508285173031216e-05, 'num_tokens': 2736027.0, 'mean_token_accuracy': 0.6880845108175816, 'epoch': 1.06}
+{'eval_loss': 1.2965668439865112, 'eval_runtime': 108.8261, 'eval_samples_per_second': 13.802, 'eval_steps_per_second': 1.728, 'eval_num_tokens': 2736027.0, 'eval_mean_token_accuracy': 0.6938738765868735, 'epoch': 1.06}
+{'loss': 1.2532, 'grad_norm': 0.22960418462753296, 'learning_rate': 4.7560061049881674e-05, 'num_tokens': 4046316.0, 'mean_token_accuracy': 0.7030689988285304, 'epoch': 1.6}
+{'eval_loss': 1.2945157289505005, 'eval_runtime': 108.825, 'eval_samples_per_second': 13.802, 'eval_steps_per_second': 1.728, 'eval_num_tokens': 4046316.0, 'eval_mean_token_accuracy': 0.6946807088370018, 'epoch': 1.6}
+{'loss': 1.2068, 'grad_norm': 0.41891106963157654, 'learning_rate': 2.082021880154958e-05, 'num_tokens': 5260477.0, 'mean_token_accuracy': 0.7118351547750954, 'epoch': 2.13}
+{'eval_loss': 1.2876574993133545, 'eval_runtime': 109.3213, 'eval_samples_per_second': 13.739, 'eval_steps_per_second': 1.72, 'eval_num_tokens': 5260477.0, 'eval_mean_token_accuracy': 0.6969277024903195, 'epoch': 2.13}
+{'loss': 1.1698, 'grad_norm': 0.48469528555870056, 'learning_rate': 3.4438337566005675e-06, 'num_tokens': 6556749.0, 'mean_token_accuracy': 0.7188400486856699, 'epoch': 2.66}
+{'eval_loss': 1.2960567474365234, 'eval_runtime': 108.9291, 'eval_samples_per_second': 13.789, 'eval_steps_per_second': 1.726, 'eval_num_tokens': 6556749.0, 'eval_mean_token_accuracy': 0.6958547646694995, 'epoch': 2.66}
+{'train_runtime': 8776.9344, 'train_samples_per_second': 4.104, 'train_steps_per_second': 0.064, 'train_loss': 1.2545515019842919, 'num_tokens': 7398213.0, 'mean_token_accuracy': 0.7206299785078157, 'epoch': 3.0}
+xgpi13:2106862:2107052 [1] NCCL INFO [Service thread] Connection closed by localRank 0
+xgpi13:2106862:2106862 [1] NCCL INFO comm 0x3d6c0070 rank 1 nranks 2 cudaDev 1 busId e3000 - Destroy COMPLETE
+[Rank 1] DDP process group destroyed. Exiting.
+FSDP (bf16) training script finished. Results saved to /home/e/e1415353/my_projects/Assignment7Folder/Assignment7/results/fsdp_qlora_255718

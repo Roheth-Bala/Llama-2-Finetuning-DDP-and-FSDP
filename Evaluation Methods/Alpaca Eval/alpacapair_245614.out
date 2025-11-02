@@ -1,0 +1,94 @@
+Conda env 'ml' activated.
+Using Python: /home/e/e1415353/my_projects/miniconda3/envs/ml/bin/python
+===========================================
+Starting AlpacaEval Pairwise Job 245614
+Judge Model: prometheus-eval/prometheus-7b-v2.0
+Main Output Directory: ./pairwise_alpacaeval_results_245614
+===========================================
+--- Evaluating Fine-tuned Model ---
+Model Path (A): /home/e/e1415353/my_projects/Assignment7Folder/Assignment7/results_235293/dolly_lora_llama2_7b_smooth_integrated_fixed_v3/final
+Baseline (B): text-davinci-003
+============================================================
+ALPACAEVAL PAIRWISE EVALUATION
+============================================================
+Your Model (Response A): /home/e/e1415353/my_projects/Assignment7Folder/Assignment7/results_235293/dolly_lora_llama2_7b_smooth_integrated_fixed_v3/final
+Baseline Model (Response B): text-davinci-003 (from alpaca_eval.json)
+Judge Model: prometheus-eval/prometheus-7b-v2.0
+Number of instructions: 800
+============================================================
+Loading AlpacaEval data from: /home/e/e1415353/.cache/huggingface/hub/datasets--tatsu-lab--alpaca_eval/snapshots/2edc6fad8be6b14ea7230aabfd08188da6b8b814/alpaca_eval.json
+Found 805 total instructions
+✅ Loaded 800 instructions for evaluation
+
+1. Generating answers from YOUR model for 800 instructions...
+Loading model from /home/e/e1415353/my_projects/Assignment7Folder/Assignment7/results_235293/dolly_lora_llama2_7b_smooth_integrated_fixed_v3/final...
+Model loaded successfully!
+Unloaded your model to free VRAM.
+
+2. Loading judge model...
+Loading judge model: prometheus-eval/prometheus-7b-v2.0
+Judge model loaded successfully!
+
+3. Running pairwise evaluation on 800 examples...
+
+4. Saving results...
+
+============================================================
+ALPACAEVAL RESULTS SUMMARY
+============================================================
+Your Model ('A'): /home/e/e1415353/my_projects/Assignment7Folder/Assignment7/results_235293/dolly_lora_llama2_7b_smooth_integrated_fixed_v3/final
+Baseline ('B'): text-davinci-003
+Your Model Win Rate: 85.00%
+Your Model Loss Rate: 9.88%
+Tie Rate: 5.12%
+Average Score (1-5): 4.21
+Total Evaluations: 800
+Results saved to: ./pairwise_alpacaeval_results_245614/finetuned_model_results
+============================================================
+Fine-tuned model evaluation complete. Results in: ./pairwise_alpacaeval_results_245614/finetuned_model_results
+-------------------------------------------
+--- Evaluating Baseline Model ---
+Model Path (A): meta-llama/Llama-2-7b-hf
+Baseline (B): text-davinci-003
+============================================================
+ALPACAEVAL PAIRWISE EVALUATION
+============================================================
+Your Model (Response A): meta-llama/Llama-2-7b-hf
+Baseline Model (Response B): text-davinci-003 (from alpaca_eval.json)
+Judge Model: prometheus-eval/prometheus-7b-v2.0
+Number of instructions: 800
+============================================================
+Loading AlpacaEval data from: /home/e/e1415353/.cache/huggingface/hub/datasets--tatsu-lab--alpaca_eval/snapshots/2edc6fad8be6b14ea7230aabfd08188da6b8b814/alpaca_eval.json
+Found 805 total instructions
+✅ Loaded 800 instructions for evaluation
+
+1. Generating answers from YOUR model for 800 instructions...
+Loading model from meta-llama/Llama-2-7b-hf...
+Model loaded successfully!
+Unloaded your model to free VRAM.
+
+2. Loading judge model...
+Loading judge model: prometheus-eval/prometheus-7b-v2.0
+Judge model loaded successfully!
+
+3. Running pairwise evaluation on 800 examples...
+
+4. Saving results...
+
+============================================================
+ALPACAEVAL RESULTS SUMMARY
+============================================================
+Your Model ('A'): meta-llama/Llama-2-7b-hf
+Baseline ('B'): text-davinci-003
+Your Model Win Rate: 79.00%
+Your Model Loss Rate: 14.75%
+Tie Rate: 6.25%
+Average Score (1-5): 4.09
+Total Evaluations: 800
+Results saved to: ./pairwise_alpacaeval_results_245614/baseline_model_results
+============================================================
+Baseline model evaluation complete. Results in: ./pairwise_alpacaeval_results_245614/baseline_model_results
+-------------------------------------------
+Job completed successfully.
+Final results are located in: ./pairwise_alpacaeval_results_245614
+===========================================
