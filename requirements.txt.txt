@@ -1,0 +1,16 @@
+# Core ML/Torch Libraries
+torch
+transformers
+datasets
+trl
+peft
+accelerate
+bitsandbytes
+matplotlib
+huggingface_hub
+scipy
+
+# Evaluation Libraries
+alpaca_eval
+fastchat
+lm_eval
