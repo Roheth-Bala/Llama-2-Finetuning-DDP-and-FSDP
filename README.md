@@ -6,7 +6,6 @@ This repository contains the code and analysis for a comparative study on fine-t
 2.  **Distributed Strategy Comparison:** Benchmarking Distributed Data Parallel (DDP) with QLoRA against Fully Sharded Data Parallel (FSDP) with `bf16` precision.
 
 The final, detailed findings are compiled in the NNDL_Assignment7_Report.pdf.
-
 ---
 
 📈 Outputs and Results
