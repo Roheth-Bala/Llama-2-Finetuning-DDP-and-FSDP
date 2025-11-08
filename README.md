@@ -5,9 +5,24 @@ This repository contains the code and analysis for a comparative study on fine-t
 1.  **LoRA Rank Comparison:** Analyzing the impact of LoRA adapter capacity (Rank 8 vs. Rank 32) on a single GPU.
 2.  **Distributed Strategy Comparison:** Benchmarking Distributed Data Parallel (DDP) with QLoRA against Fully Sharded Data Parallel (FSDP) with `bf16` precision.
 
-The final, detailed findings are compiled in the [**`assignment7_report.pdf`**](assignment7_report.pdf) (once compiled).
+The final, detailed findings are compiled in the NNDL_Assignment7_Report.pdf.
 
 ---
+
+📈 Outputs and Results
+All generated outputs, including result curves, are located in their respective folders.
+
+🚀 Running the Training
+The steps to replicate the training process are provided in the .sh scripts within each folder.
+
+Important Environment Note:
+
+These scripts are sbatch files configured for the NUS SOC (School of Computing) Cluster.
+
+You will need to adapt the commands within these .sh files to match your specific hardware or cluster environment.
+
+⚙️ Configuration
+The adapter configuration file (adapter_config.json and safetensors) is located in the Finetuning/rank_8/ directory.
 
 ## 🎯 Project Objective
 
@@ -103,21 +118,14 @@ python Finetuning/rank_32/train_dolly_lora.py
 
 ### 2. Distributed Fine-Tuning (DDP)
 
-This script uses `accelerate` to launch a Distributed Data Parallel (DDP) job, training a QLoRA model across multiple GPUs.
 
-```bash
-# Example: Launch DDP training on 2 GPUs
-accelerate launch DDP/train_ddp_qlora.py
-```
+You will need to adapt the commands within these .sh files to match your specific hardware or cluster environment.
 
 ### 3. Distributed Fine-Tuning (FSDP)
 
-This script uses `accelerate` to launch a Fully Sharded Data Parallel (FSDP) job, training a full `bf16` precision model.
 
-```bash
-# Example: Launch FSDP training on 2 GPUs
-accelerate launch FSDP/train_fsdp_bf16.py
-```
+You will need to adapt the commands within these .sh files to match your specific hardware or cluster environment.
+
 
 ---
 
